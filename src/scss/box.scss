@@ -1,0 +1,64 @@
+.box {
+    width: 387px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    right: 51px;
+    top: 285px;
+    padding: 41px 60px 43px 50px;
+    &__title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: #FFFFFF;
+        margin-bottom: 28px;
+    }
+    &__form {
+
+    }
+    &__input {
+        padding: 12px 24px;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.44px;
+        color: #000;
+        margin-bottom: 22px;
+        width: 100%;
+        max-height: 44px;
+        &--last {
+            margin-bottom: 0;
+        }
+        &::placeholder {
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.44px;
+            color: #000;
+        }
+    }
+    &__search {
+        position: relative;
+    }
+    &__button {
+        width: 44px;
+        height: 44px;
+        background: #621212;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,29 @@
+.nav {
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        &--logo {
+            width: 285px;
+            height: 31px;
+            .nav__link {
+                width: 285px;
+                height: 31px;
+            }
+            .nav__svg {
+                width: 285px;
+                height: 31px;
+            }
+        }
+    }
+    &__link {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000;
+    }
+}

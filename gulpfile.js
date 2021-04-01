@@ -40,7 +40,7 @@ function styles() {
 	return gulp.src('src/scss/style.scss')
 	.pipe(plumber())
 	.pipe(sass())
-	.pipe(concat('virtual-cloud.css'))
+	.pipe(concat('style.css'))
 	.pipe(autoprefixer({
     cascade: false
   }))
@@ -58,7 +58,7 @@ function styles() {
 
 function scripts() {
 	return gulp.src('src/js/**/*.js')
-	.pipe(concat('virtual-cloud.js'))
+	.pipe(concat('app.js'))
 	.pipe(gulp.dest('dist/js'))
 	.pipe(jsmin({
 		toplevel: false
