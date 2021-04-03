@@ -72,6 +72,9 @@
     .find-auto {
         background-size: cover;
         height: 1300px;
+        &__wrap {
+            width: 100%;
+        }
     }
 }
 
