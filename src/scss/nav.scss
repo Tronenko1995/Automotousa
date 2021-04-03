@@ -27,3 +27,46 @@
         color: #000;
     }
 }
+
+@media (max-width: 1200px) {
+    .nav {
+        &__item {
+            display: none;
+            &--logo {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: fit-content;
+                .nav__svg {
+                    width: 230px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 836px) {
+    .nav {
+        &__item {
+            &--logo {
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .nav {
+        &__item {
+            &--logo {
+                .nav__svg {
+                    width: 190px;
+                    height: 20px;
+                }
+            }   
+        }
+    }
+}

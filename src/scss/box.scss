@@ -62,3 +62,32 @@
         align-items: center;
     }
 }
+
+@media (max-width: 1200px) {
+    .box {
+        right: unset;
+        left: 40px;
+        top: 467px;
+        padding: 28px 28px 59px 28px;
+        width: 354px;
+    }
+}
+
+@media (max-width: 836px) {
+    .box {
+        left: 20px;
+        top: 425px;
+        padding: 28px 28px 59px 28px;
+    }
+}
+
+@media (max-width: 516px) {
+    .box {
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        top: 100%;
+        margin-top: 28px;
+        // padding: 28px 28px 59px 28px;
+    }
+}

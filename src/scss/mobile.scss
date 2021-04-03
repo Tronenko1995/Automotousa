@@ -1,0 +1,40 @@
+.mobile {
+    display: none;
+    &__button {
+        width: 30px;
+        padding: 8px 0;
+        cursor: pointer;
+        &-item {
+            width: 30px;
+            height: 2px;
+            background: #000;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                top: -8px;
+            }
+            &::after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                top: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,57 @@
+.callback {
+    &__button {
+        background-color: #fff;
+        padding: 10px 68px 11px 36px;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000;
+        cursor: pointer;
+        position: relative;
+        &:after {
+            content: '🠒';
+            width: 44px;
+            height: 44px;
+            background: #621212;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .callback {
+        &__button {
+            padding: 10px 90px 12px 24px;
+            font-size: 16px;
+            line-height: 19px;
+            &:after {
+                width: 41px;
+                height: 41px;
+            }
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .callback {
+        &__button {
+            padding: 7px 57px 8px 28px;
+            font-size: 14px;
+            line-height: 16px;
+            &:after {
+                width: 30px;
+                height: 31px;
+            }
+        }
+    }
+}
