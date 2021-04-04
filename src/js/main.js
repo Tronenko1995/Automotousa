@@ -61,6 +61,36 @@ $(document).ready(function() {
             description: 'Повреждения передней части, повреждение зажней части.',
             descriptionNext: 'Заводится и едет.'
         },
+        {
+            name: 'Acura MDX 2014',
+            img: 'img/auto/Acura_MDX_2014.jpg',
+            v: '73 л',
+            driveUnit: 'передний и задний',
+            mileage: 14954,
+            engine: 'V6',
+            description: 'Повреждения передней части, повреждение зажней части.',
+            descriptionNext: 'Заводится и едет.'
+        },
+        {
+            name: '2017 HYUNDAI SONATA SE',
+            img: 'img/auto/2017_HYUNDAI_SONATA_SE.jpg',
+            v: '73 л',
+            driveUnit: 'передний и задний',
+            mileage: 14954,
+            engine: 'V6',
+            description: 'Повреждения передней части, повреждение зажней части.',
+            descriptionNext: 'Заводится и едет.'
+        },
+        {
+            name: '2019 JEEP COMPASS LATITUDE',
+            img: 'img/auto/2019_JEEP_COMPASS_LATITUDE.jpg',
+            v: '73 л',
+            driveUnit: 'передний и задний',
+            mileage: 14954,
+            engine: 'V6',
+            description: 'Повреждения передней части, повреждение зажней части.',
+            descriptionNext: 'Заводится и едет.'
+        },
     ]
 
 
@@ -87,7 +117,7 @@ $(document).ready(function() {
 
     function appendHot(item) {
         $('.hot-offer__list').append(`
-        <div class="hot-offer__item svg-fire">
+        <li class="hot-offer__item svg-fire">
             <img class="hot-offer__item-img" src="${item.img}" alt="" width="394" height="217">
             <p class="hot-offer__item-title">${item.name}</p>
             <div class="hot-offer__item-row">
@@ -108,7 +138,7 @@ $(document).ready(function() {
             </div>
             <p class="hot-offer__item-text">${item.description}<br>${item.descriptionNext}</p>
             <button class="hot-offer__item-button callback__button">Обратный звонок</button>
-        </div>
+        </li>
 `)
     }
 
@@ -129,9 +159,11 @@ $(document).ready(function() {
         currentHotRender = currentHotRender + 1;
     }
 
-    // renderingHotAuto();
+    renderingHotAuto();
 
     function loadMoreHotAuto() {
+        const container = document.createElement('ul')
+        $(container).addClass('hot-offer__list')
         for (let i = currentHotRender; i < currentHotRender+3; i++) {
             if (i == hotAuto.length-1) {
                 $('.jsMoreHot').remove();
@@ -141,14 +173,45 @@ $(document).ready(function() {
                 break;
             }
             let item = hotAuto[i];
-            appendHot(item)
+            // appendHot(item)
+            const newItem = document.createElement('li')
+            $(newItem).html(`
+            <img class="hot-offer__item-img" src="${item.img}" alt="" width="394" height="217">
+            <p class="hot-offer__item-title">${item.name}</p>
+            <div class="hot-offer__item-row">
+                <p class="hot-offer__item-text">Объем бака, л</p>
+                <p class="hot-offer__item-text">${item.v}</p>
+            </div>
+            <div class="hot-offer__item-row">
+                <p class="hot-offer__item-text">Привод</p>
+                <p class="hot-offer__item-text">${item.driveUnit}</p>
+            </div>
+            <div class="hot-offer__item-row">
+                <p class="hot-offer__item-text">Пробег</p>
+                <p class="hot-offer__item-text">${item.mileage}</p>
+            </div>
+            <div class="hot-offer__item-row">
+                <p class="hot-offer__item-text">Двигатель</p>
+                <p class="hot-offer__item-text">${item.engine}</p>
+            </div>
+            <p class="hot-offer__item-text">${item.description}<br>${item.descriptionNext}</p>
+            <button class="hot-offer__item-button callback__button">Обратный звонок</button>`).addClass('hot-offer__item svg-fire')
+        $(container).append(newItem)
             tempHot = i;
         }
         currentHotRender = tempHot + 1;
+        $('.hot-offer__container').append(container)
+        // const element = document.createElement('div');
+        // const tmp = $(element).html()
+        // $(element).html(`${tmp}123`);
+        // $('.hot-offer__list').html(element)
+        // console.log('test')
+
+
     }
 
     $('.jsMoreHot').on('click', function() {
-        // loadMoreHotAuto();
+        loadMoreHotAuto();
     })
 
 });

@@ -1,0 +1,273 @@
+.why{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    &__wrap {
+        width: 1920px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__title {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 57px;
+        line-height: 67px;
+        color: #000;
+        width: fit-content;
+        margin: 0 50px;
+    }
+    &__line {
+        border: 1px solid #000;
+        flex: 1 1 auto;
+    }
+    &__container {
+        &-wrap {
+            margin-top: 45px;
+            width: 100%;
+            height: 684px;
+            background-image: url('../img/bg-2.jpg');
+            background-repeat: no-repeat;
+        }
+        width: 100%;
+        height: 684px;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 64px 20px 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__list {
+        width: 1600px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-text {
+            width: 691px;
+            margin-top: 37px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        &-svg {
+            width: 131px;
+            height: 169px;
+        }
+    }
+    &__text {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 57px;
+        line-height: 67px;
+        color: #FFFFFF;
+        margin-top: 50px;
+    }
+    &__description {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 33px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 2px;
+    }
+    &__button {
+        margin-top: 36px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .why {
+        &__wrap {
+            width: 100%;
+        }
+        &__container {
+            &-wrap {
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 1640px) {
+    .why {
+        &__list {
+            width: 100%;
+        }
+        &__container {
+            &-wrap {
+                background-size: cover;
+                background-position: 70% 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .why {
+        &__item {
+            &-text {
+                width: 500px;
+                font-size: 22px;
+                line-height: 33px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .why {
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &__text {
+            font-size: 36px;
+            line-height: 42px;
+            margin-top: 24px;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 21px;
+            margin-top: 6px;
+        }
+        &__container {
+            &-wrap {
+                height: 626px;
+            }
+            height: 626px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .why {
+        &__container {
+            padding: 25px 20px 50px 20px;
+        }
+        &__item {
+            &-text {
+                width: 354px;
+                font-size: 16px;
+                line-height: 19px;
+                margin-top: 23px;
+            }
+            &-svg {
+                width: 103px;
+                height: 133px;
+                background-size: 103px 133px;
+            }
+        }
+        &__container {
+            &-wrap {
+                height: 470px;
+            }
+            height: 470px;
+        }
+    }
+}
+
+@media (max-width: 747px) {
+    .why {
+        &__list {
+            flex-direction: column;
+        }
+        &__item {
+            flex-direction: row;
+            margin-bottom: 31px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &-svg {
+                min-width: 103px;
+                min-height: 133px;
+            }
+            &-text {
+                width: auto;
+                margin-left: 19px;
+                text-align: left;
+            }
+        }
+        &__text {
+            font-size: 27px;
+        }
+        &__container {
+            &-wrap {
+                height: 523px;
+                margin-top: 28px;
+            }
+            height: 523px;
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .why {
+        &__container {
+            padding: 29px 20px 28px 20px;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0 20px;
+        }
+        &__item {
+            &-svg {
+                min-width: 55px;
+                min-height: 71px;
+                width: 55px;
+                height: 71px;
+                background-size: 55px 71px;
+            }
+            &-text {
+                margin-top: 0;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        &__text {
+            margin-top: 31px;
+            font-size: 19px;
+            line-height: 23px;
+        }
+        &__description {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 3px;
+        }
+        &__button {
+            margin-top: 18px;
+            padding: 7px 57px 8px 28px;
+            font-size: 14px;
+            line-height: 16px;
+            &::after {
+                width: 30px;
+                height: 31px;
+            }
+        }
+        &__container {
+            &-wrap {
+                height: 349px;
+            }
+            height: 349px;
+        }
+    }
+}

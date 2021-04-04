@@ -29,6 +29,14 @@
         border: 1px solid #000;
         flex: 1 1 auto;
     }
+    &__storage {
+        width: 100%;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__list {
         margin-top: 50px;
         // padding: 0 50px;
@@ -44,7 +52,7 @@
         width: 32%;
         max-width: 526px;
         min-width: 354px;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
         &.svg-fire {
             &:after {
                 width: 50px;
@@ -138,4 +146,95 @@
             }
         }
     }
+}
+
+@media (max-width: 1260px) {
+    .hot-offer {
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hot-offer {
+        &__storage {
+        }
+        &__container {
+            width: 100%;
+            overflow-x: auto;
+        }
+        &__list {
+            flex-wrap: unset;
+            width: 100vw;
+        }
+        &__item {
+            margin-right: 20px;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__button {
+            font-size: 16px;
+            line-height: 19px;
+            padding: 12px 57px 11px 56px;
+            margin-top: 4px;
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .hot-offer {
+        margin-top: 380px;
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0 20px;
+        }
+        &__list {
+            margin-top: 20px;
+        }
+        &__item {
+            min-width: 261px;
+            padding: 14px;
+            margin-bottom: 20px;
+            &-title {
+                font-size: 18px;
+                line-height: 21px;
+            }
+            &-text {
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &-button {
+                width: 100%;
+                margin-top: 28px;
+                padding: 7px 57px 8px 28px;
+                font-size: 14px;
+                line-height: 16px;
+                &:after {
+                    width: 30px;
+                    height: 31px;
+                }
+            }
+            &.svg-fire {
+                &:after {
+                    background-size: 35px 35px;
+                    top: 14px;
+                    right: 14px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+        &__button {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 13px 32px 13px 33px;
+            margin-top: 8px;
+        }
+    }
+
 }

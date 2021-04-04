@@ -4,32 +4,17 @@
 
 @import './svg';
 
+@import './UI/callback.scss';
+
+
 @import './find-auto';
 @import './nav';
 @import './box';
 @import './mobile';
 @import './mobile-menu';
 
+
 @import './hot-offer';
 
 
-@import './UI/callback.scss'
-
-
-
-// @import './UI/vir-tools-item';
-// @import './UI/vir-slider';
-// @import './UI/vir-checkbox';
-// @import './UI/vir-select';
-
-// @import './vir/vir-banner';
-// @import './vir/vir-subdomain';
-// @import './vir/vir-calculator';
-
-// @import './vir/vir-options';
-//     @import './vir/vir-table';
-
-// @import './vir/vir-excellence';
-// @import './vir/vir-relax';
-// @import './vir/vir-reviews';
-// @import './vir/vir-tarif';
+@import './why';
