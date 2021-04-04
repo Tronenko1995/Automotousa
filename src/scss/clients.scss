@@ -1,0 +1,283 @@
+.clients{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    &__wrap {
+        width: 1920px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__title {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 57px;
+        line-height: 67px;
+        color: #000;
+        width: fit-content;
+        margin: 0 50px;
+    }
+    &__line {
+        border: 1px solid #000;
+        flex: 1 1 auto;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 1668px;
+        margin-top: 44px;
+    }
+    &__item {
+        width: 32%;
+        max-width: 440px;
+        min-width: 225px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 45px;
+        &-svg{
+            &.svg-uno {
+                width: 67px;
+                height: 200px;
+                background-size: 67px 200px;
+            }
+            &.svg-dos {
+                width: 114px;
+                height: 200px;
+                background-size: 114px 200px;
+            }
+            &.svg-tres {
+                width: 104px;
+                height: 200px;
+                background-size: 104px 200px;
+            }
+            &.svg-cuatro {
+                width: 122px;
+                height: 200px;
+                background-size: 122px 200px;
+            }
+            &.svg-cinco {
+                width: 106px;
+                height: 200px;
+                background-size: 106px 200px;
+            }
+            &.svg-seis {
+                width: 105px;
+                height: 200px;
+                background-size: 105px 200px;
+            }
+        }
+        &-text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24.504px;
+            line-height: 29px;
+            text-align: center;
+            color: #000000;
+            position: relative;
+            width: 100%;
+            &::before {
+                content: '';
+                bottom: 100%;
+                margin-bottom: 14px;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .clients {
+        &__wrap {
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 1700px) {
+    .clients {
+        &__list {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 1360px) {
+    .clients {
+        &__item {
+            flex-direction: row;
+            min-width: 352px;
+            &--uno {
+                .clients__item-text {
+                    margin-left: 56px;
+                }
+            }
+            &--dos {
+                .clients__item-text {
+                    margin-left: 30px;
+                }
+            }
+            &--tres {
+                .clients__item-text {
+                    margin-left: 35px;
+                }
+            }
+            &--cuatro {
+                .clients__item-text {
+                    margin-left: 28px;
+                }
+            }
+            &--cinco {
+                .clients__item-text {
+                    margin-left: 37px;
+                }
+            }
+            &--seis {
+                .clients__item-text {
+                    margin-left: 34px;
+                }
+            }
+            &-text {
+                font-size: 16px;
+                line-height: 19px;
+                text-align: left;
+                &::before {
+                    display: none;
+                }
+            }
+            &-svg{
+                position: relative;
+                &::before {
+                    content: '';
+                    top: 100%;
+                    width: 225px;
+                    height: 1px;
+                    background: #000;
+                    position: absolute;
+                    left: 0;
+                }
+                &.svg-uno {
+                    width: 37px;
+                    min-width: 37px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 37px 112px;
+                }
+                &.svg-dos {
+                    width: 64px;
+                    min-width: 64px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 64px 112px;
+                }
+                &.svg-tres {
+                    width: 59px;
+                    min-width: 59px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 59px 112px;
+                }
+                &.svg-cuatro {
+                    width: 69px;
+                    min-width: 69px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 69px 112px;
+                }
+                &.svg-cinco {
+                    width: 60px;
+                    min-width: 60px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 60px 112px;
+                }
+                &.svg-seis {
+                    width: 59px;
+                    min-width: 59px;
+                    height: 112px;
+                    min-height: 112px;
+                    background-size: 59px 112px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1260px) {
+        .clients {
+            &__title {
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+    }
+
+    @media (max-width: 1095px) {
+        .clients {
+            &__list {
+
+            }
+            &__item {
+                &--uno {
+                    order: 1
+                }
+                &--dos {
+                    order: 3
+                }
+                &--tres {
+                    order: 5
+                }
+                &--cuatro {
+                    order: 2
+                }
+                &--cinco {
+                    order:4
+                }
+                &--seis {
+                    order: 6
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 743px) {
+    .clients {
+        &__list {
+            justify-content: center;
+        }
+        &__item {
+            order: unset;
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .clients {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0 20px;
+        }
+        &__list {
+            justify-content: flex-start;
+            padding: 0 0 0 12px;
+        }
+    }
+}

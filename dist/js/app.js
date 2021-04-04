@@ -94,8 +94,6 @@ $(document).ready(function() {
     ]
 
 
-
-
     let mobiMenu = false,
         currentHotRender = 0,
         tempHot = 0;
@@ -173,7 +171,6 @@ $(document).ready(function() {
                 break;
             }
             let item = hotAuto[i];
-            // appendHot(item)
             const newItem = document.createElement('li')
             $(newItem).html(`
             <img class="hot-offer__item-img" src="${item.img}" alt="" width="394" height="217">
@@ -201,13 +198,6 @@ $(document).ready(function() {
         }
         currentHotRender = tempHot + 1;
         $('.hot-offer__container').append(container)
-        // const element = document.createElement('div');
-        // const tmp = $(element).html()
-        // $(element).html(`${tmp}123`);
-        // $('.hot-offer__list').html(element)
-        // console.log('test')
-
-
     }
 
     $('.jsMoreHot').on('click', function() {
