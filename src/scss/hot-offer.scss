@@ -209,7 +209,7 @@
                 line-height: 16px;
             }
             &-button {
-                width: 100%;
+                // width: 100%;
                 margin-top: 28px;
                 padding: 7px 57px 8px 28px;
                 font-size: 14px;
@@ -217,6 +217,7 @@
                 &:after {
                     width: 30px;
                     height: 31px;
+                    font-size: 22px;
                 }
             }
             &.svg-fire {

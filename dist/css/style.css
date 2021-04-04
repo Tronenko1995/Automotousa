@@ -20,27 +20,24 @@
   font-style: normal;
   font-weight: bold; }
 
-body {
-  margin: 0; }
-
-.automotousa * {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   outline: none; }
-  .automotousa *:after, .automotousa *:before {
+  *:after, *:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
 
-.automotousa ul {
+ul {
   list-style: none; }
 
-.automotousa a {
+a {
   text-decoration: none; }
 
-.automotousa .hide {
+.hide {
   display: none !important; }
 
 .svg-fire {
@@ -216,7 +213,8 @@ body {
       line-height: 16px; }
       .find-auto__button:after {
         width: 30px;
-        height: 31px; } }
+        height: 31px;
+        font-size: 22px; } }
 
 .nav__menu {
   display: -webkit-box;
@@ -744,14 +742,14 @@ body {
         font-size: 14px;
         line-height: 16px; }
       .hot-offer__item-button {
-        width: 100%;
         margin-top: 28px;
         padding: 7px 57px 8px 28px;
         font-size: 14px;
         line-height: 16px; }
         .hot-offer__item-button:after {
           width: 30px;
-          height: 31px; }
+          height: 31px;
+          font-size: 22px; }
       .hot-offer__item.svg-fire:after {
         background-size: 35px 35px;
         top: 14px;
@@ -1079,23 +1077,10 @@ body {
     -webkit-box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.25);
     box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.25);
     padding: 28px;
-    width: 32%;
-    max-width: 526px;
-    min-width: 354px; }
-    .join-auction__item.svg-fire:after {
-      width: 50px;
-      height: 50px;
-      top: 28px;
-      right: 28px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
+    width: 24%;
+    max-width: 440px;
+    min-width: 354px;
+    margin-bottom: 50px; }
     .join-auction__item-img {
       width: 100%;
       height: auto; }
@@ -1105,8 +1090,8 @@ body {
       font-family: 'Roboto Condensed';
       font-style: normal;
       font-weight: normal;
-      font-size: 28px;
-      line-height: 33px;
+      font-size: 23px;
+      line-height: 27px;
       color: #000000;
       border-bottom: 1px solid #621212;
       padding-bottom: 15px; }
@@ -1122,8 +1107,8 @@ body {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: normal;
-      font-size: 22px;
-      line-height: 26px; }
+      font-size: 18px;
+      line-height: 22px; }
     .join-auction__item-button {
       display: block;
       margin-left: auto;
@@ -1131,7 +1116,6 @@ body {
       border: 1px solid #000000; }
   .join-auction__button {
     cursor: pointer;
-    margin-top: 50px;
     background-color: #621212;
     font-family: 'Roboto Condensed';
     font-style: normal;
@@ -1166,18 +1150,11 @@ body {
     line-height: 42px; } }
 
 @media (max-width: 1200px) {
-  .join-auction__container {
-    width: 100%;
-    overflow-x: auto; }
   .join-auction__list {
-    -ms-flex-wrap: unset;
-    flex-wrap: unset;
-    width: 100vw; }
+    width: calc(100% - 40px); }
   .join-auction__item {
-    margin-right: 20px;
-    margin-bottom: 30px; }
-    .join-auction__item:last-child {
-      margin-right: 0; }
+    padding: 20px;
+    margin-bottom: 20px; }
   .join-auction__button {
     font-size: 16px;
     line-height: 19px;
@@ -1185,44 +1162,27 @@ body {
     margin-top: 4px; } }
 
 @media (max-width: 516px) {
-  .join-auction {
-    margin-top: 380px; }
-    .join-auction__title {
-      font-size: 24px;
-      line-height: 28px;
-      margin: 0 20px; }
-    .join-auction__list {
-      margin-top: 20px; }
-    .join-auction__item {
-      min-width: 261px;
-      padding: 14px;
-      margin-bottom: 20px; }
-      .join-auction__item-title {
-        font-size: 18px;
-        line-height: 21px; }
-      .join-auction__item-text {
-        font-size: 14px;
-        line-height: 16px; }
-      .join-auction__item-button {
-        width: 100%;
-        margin-top: 28px;
-        padding: 7px 57px 8px 28px;
-        font-size: 14px;
-        line-height: 16px; }
-        .join-auction__item-button:after {
-          width: 30px;
-          height: 31px; }
-      .join-auction__item.svg-fire:after {
-        background-size: 35px 35px;
-        top: 14px;
-        right: 14px;
-        width: 35px;
-        height: 35px; }
-    .join-auction__button {
-      font-size: 14px;
-      line-height: 16px;
-      padding: 13px 32px 13px 33px;
-      margin-top: 8px; } }
+  .join-auction__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 20px; }
+  .join-auction__list {
+    margin-top: 20px;
+    width: calc(100% - 20px); }
+  .join-auction__item-button {
+    margin-top: 35px;
+    padding: 7px 46px 7px 25px;
+    font-size: 14px;
+    line-height: 16px; }
+    .join-auction__item-button:after {
+      width: 30px;
+      height: 30px;
+      font-size: 22px; }
+  .join-auction__button {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 13px 32px 13px 33px;
+    margin-top: 8px; } }
 
 .why {
   width: 100%;
@@ -1464,3 +1424,153 @@ body {
     height: 349px; }
     .why__container-wrap {
       height: 349px; } }
+
+.footer {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 686px;
+  background-image: url("../img/bg-3.jpg");
+  background-repeat: no-repeat; }
+  .footer__wrap {
+    width: 1920px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer__logo {
+    margin-top: 100px;
+    width: 593px;
+    height: 64px; }
+    .footer__logo-img {
+      width: 593px;
+      height: 64px; }
+  .footer__title {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 67px;
+    color: #FFFFFF;
+    margin-top: 50px; }
+  .footer__text {
+    margin-top: 2px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF; }
+  .footer__button {
+    margin-top: 44px;
+    padding: 10px 94px 11px 51px; }
+  .footer__info {
+    margin-top: 162px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 1558px; }
+    .footer__info-text {
+      font-family: 'Roboto Condensed';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 33px;
+      text-align: center;
+      color: #FFFFFF; }
+    .footer__info-link {
+      color: #fff; }
+
+@media (min-width: 1920px) {
+  .footer {
+    background-size: cover; }
+    .footer__wrap {
+      width: 100%; } }
+
+@media (max-width: 1600px) {
+  .footer__info {
+    width: calc(100% - 40px); } }
+
+@media (max-width: 1400px) {
+  .footer__info {
+    margin-top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .footer__info-text {
+      margin-bottom: 13px; }
+      .footer__info-text:first-child {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        margin-bottom: 0; } }
+
+@media (max-width: 1200px) {
+  .footer {
+    height: 492px;
+    background-size: cover; }
+    .footer__logo {
+      width: 290px;
+      height: 25px;
+      margin-top: 30px; }
+      .footer__logo-img {
+        width: 290px;
+        height: 25px; }
+    .footer__title {
+      font-size: 36px;
+      line-height: 42px; }
+    .footer__text {
+      margin-top: 5px;
+      font-size: 18px;
+      line-height: 21px; }
+    .footer__button {
+      margin-top: 55px; } }
+
+@media (max-width: 600px) {
+  .footer {
+    height: 330px; }
+    .footer__logo {
+      width: 167px;
+      height: 18px;
+      margin-top: 28px; }
+      .footer__logo-img {
+        width: 167px;
+        height: 18px; }
+    .footer__title {
+      margin-top: 37px;
+      font-size: 24px;
+      line-height: 28px; }
+    .footer__text {
+      margin-top: 0px;
+      font-size: 14px;
+      line-height: 16px; }
+    .footer__button {
+      margin-top: 20px;
+      padding: 7px 57px 8px 28px;
+      font-size: 14px;
+      line-height: 16px; }
+      .footer__button::after {
+        width: 30px;
+        height: 31px;
+        font-size: 22px; }
+    .footer__info {
+      margin-top: 35px; }
+      .footer__info-text {
+        font-size: 14px;
+        line-height: 16px; } }
