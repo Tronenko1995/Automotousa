@@ -129,7 +129,7 @@ $(document).ready(function() {
         currentHotRender = currentHotRender + 1;
     }
 
-    renderingHotAuto();
+    // renderingHotAuto();
 
     function loadMoreHotAuto() {
         for (let i = currentHotRender; i < currentHotRender+3; i++) {
@@ -148,7 +148,7 @@ $(document).ready(function() {
     }
 
     $('.jsMoreHot').on('click', function() {
-        loadMoreHotAuto();
+        // loadMoreHotAuto();
     })
 
 });

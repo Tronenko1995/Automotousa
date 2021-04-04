@@ -94,6 +94,13 @@
         }
         &__button {
             margin-top: 32px;
+            padding: 10px 90px 12px 24px;
+            font-size: 16px;
+            line-height: 19px;
+            &:after {
+                width: 41px;
+                height: 41px;
+            }
         }
     }
 }
@@ -145,6 +152,13 @@
         }
         &__button {
             margin-top: 28px;
+            padding: 7px 57px 8px 28px;
+            font-size: 14px;
+            line-height: 16px;
+            &:after {
+                width: 30px;
+                height: 31px;
+            }
         }
     }
 }
