@@ -29,7 +29,9 @@ function copy () {
 	return gulp.src([
 		"src/fonts/**/*.{ttf,woff,woff2}",
 		"src/img/**/*.{gif,svg,ico}",
-		"src/libs/**/*"
+		"src/libs/**/*",
+		"src/php/**/*",
+		"src/js/**/*"
 	], {
 		base: "src"
 	})
@@ -106,9 +108,11 @@ function watch() {
   });
 
   gulp.watch('src/scss/**/*.scss', styles);
-  gulp.watch('src/js/**/*.js', scripts);
+//   gulp.watch('src/js/**/*.js', scripts);
 	gulp.watch("src/fonts/*", copy)
 	gulp.watch("src/libs/**/*", copy)
+	gulp.watch("src/php/**/*", copy)
+	gulp.watch("src/js/**/*", copy)
 	// gulp.watch("source/img/**/*.{png,jpg,jpeg}", gulp.series(images, webpfun))
 	gulp.watch("src/img/**/*.{png,jpg,jpeg}", images)
 	gulp.watch("src/img/**/*.{svg,gif}", copy)
@@ -127,5 +131,5 @@ gulp.task('watch', watch);
 
 
 // gulp.task("build", gulp.series(clean, copy, gulp.parallel(styles, scripts), images, webpfun, html));
-gulp.task("build", gulp.series(clean, copy, gulp.parallel(styles, scripts), images, html));
+gulp.task("build", gulp.series(clean, copy, styles, images, html));
 gulp.task('dev', gulp.series('build','watch'));

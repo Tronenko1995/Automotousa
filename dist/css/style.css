@@ -344,7 +344,7 @@ a {
   justify-content: center;
   width: 100%;
   height: 1080px;
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/main/bg.jpg");
   background-repeat: no-repeat; }
   .find-auto__wrap {
     width: 1920px;
@@ -1473,7 +1473,7 @@ a {
       margin-top: 45px;
       width: 100%;
       height: 684px;
-      background-image: url("../img/bg-2.jpg");
+      background-image: url("../img/main/bg-2.jpg");
       background-repeat: no-repeat; }
   .why__list {
     width: 1600px;
@@ -1657,7 +1657,7 @@ a {
   justify-content: center;
   width: 100%;
   height: 686px;
-  background-image: url("../img/bg-3.jpg");
+  background-image: url("../img/global/footer.jpg");
   background-repeat: no-repeat; }
   .footer__wrap {
     width: 1920px;

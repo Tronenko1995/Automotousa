@@ -1,4 +1,0 @@
-[04-Apr-2021 22:09:18 UTC] PHP Notice:  Undefined index: phone in /home/alext109/public_html/autosite/php/mail.php on line 5
-[04-Apr-2021 22:09:18 UTC] PHP Notice:  Undefined index: name in /home/alext109/public_html/autosite/php/mail.php on line 6
-[04-Apr-2021 22:09:18 UTC] PHP Notice:  Undefined index: product in /home/alext109/public_html/autosite/php/mail.php on line 7
-[04-Apr-2021 22:09:18 UTC] PHP Notice:  Undefined variable: result in /home/alext109/public_html/autosite/php/mail.php on line 42
