@@ -7,24 +7,17 @@
 @import './UI/callback.scss';
 @import './UI/modal.scss';
 
-
-@import './find-auto';
 @import './nav';
-@import './box';
 @import './mobile';
 @import './mobile-menu';
 
+@import './main/find-auto';
+@import './main/box';
+@import './main/hot-offer';
+@import './main/clients';
+@import './main/join-auction';
+@import './main/why';
 
-@import './hot-offer';
-
-
-@import './clients';
-
-
-@import './join-auction';
-
-
-@import './why';
-
+@import './stages/stages';
 
 @import './footer';
