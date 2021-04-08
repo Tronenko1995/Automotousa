@@ -3,9 +3,16 @@
     justify-content: center;
     width: 100%;
 
+    .nav {
+        width: 100%;
+    }
+
     &__wrap {
         width: 1920px;
         padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     &__title {
         margin-top: 100px;  
@@ -33,11 +40,11 @@
             justify-content: center;
         }
         &-next {
-            right: 0px;
+            right: -70px;
             left: auto;
         }
         &-prev {
-            left: 0px;
+            left: -70px;
             right: auto;
         }
         &-container {
@@ -55,6 +62,15 @@
             padding: 23px 14px;
             background: #FFFFFF;
             box-shadow: -3.13285px 3.13285px 19.5803px rgba(0, 0, 0, 0.25);
+            &--max {
+                width: 430px;
+                padding: 35px;
+                bottom: -98px;
+                .stages__slider-text {
+                    font-size: 30px;
+                    line-height: 35px;
+                }
+            }
         }
         &-text {
             font-family: 'Roboto Condensed';
@@ -63,56 +79,312 @@
             font-size: 24px;
             line-height: 28px;
             color: #000000;
+            text-align: left;
         }
         &-number {
             position: absolute;
             &--uno {
-                right: -30px;
-                top: 42px;
+                right: -18px;
+                top: 70px;
                 width: 67px;
                 height: 200px;
                 background-size: 67px 200px;
+            }
+            &--dos {
+                right: -18px;
+                top: 70px;
+                width: 114px;
+                height: 200px;
+                background-size: 114px 200px;
+            }
+            &--tres {
+                right: -37px;
+                top: 67px;
+                width: 104px;
+                height: 200px;
+                background-size: 104px 200px;
+            }
+            &--cuatro {
+                right: -28px;
+                top: 98px;
+                width: 122px;
+                height: 200px;
+                background-size: 122px 200px;
+            }
+            &--cinco {
+                right: -28px;
+                top: 69px;
+                width: 106px;
+                height: 200px;
+                background-size: 106px 200px;
+            }
+            &--seis {
+                right: -19px;
+                top: 98px;
+                width: 105px;
+                height: 200px;
+                background-size: 105px 200px;
+            }
+            &--siete {
+                right: -19px;
+                top: 72px;
+                width: 115px;
+                height: 200px;
+                background-size: 115px 200px;
+            }
+            &--ocho {
+                right: -19px;
+                top: 74px;
+                width: 104px;
+                height: 200px;
+                background-size: 104px 200px;
+            }
+        }
+    }
+    &__sliders {
+        width: 1377px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &-arrow {
+            position: absolute;
+            width: 100%;
+            top: 237px;
+        }
+        &-prev,
+        &-next {
+            width: 345px;
+            margin-top: 85px;
+            .stages__slider {
+                padding-bottom: 200px;
+            }
+        }
+        &-current {
+            width: 551px;
+            .stages__slider {
+                padding-bottom: 220px;
+            }
+        }
+    }
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-slide img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: 1.5s;
+}
+
+@media (max-width: 1540px) {
+    .stages {
+        &__wrap {
+            padding: 30px;
+        }
+        &__sliders {
+            width: 1030px;
+            &-prev,
+            &-next {
+                width: 290px;
+                margin-top: 30px;
+            }
+            &-current {
+                width: 401px;
+            }
+        }
+        &__slider {
+            &-description {
+                width: 216px;
+                bottom: -73px;
+                padding: 23px 14px;
+                &--max {
+                    width: 344px;
+                    padding: 30px;
+                    bottom: -98px;
+                    .stages__slider-text {
+                        font-size: 26px;
+                        line-height: 33px;
+                    }
+                }
+            }
+            &-text {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            &-number {
+                &--uno {
+                    right: -18px;
+                    top: 70px;
+                    width: 57px;
+                    height: 160px;
+                    background-size: 57px 160px;
+                }
+                &--dos {
+                    right: -18px;
+                    top: 70px;
+                    width: 91px;
+                    height: 160px;
+                    background-size: 91px 160px;
+                }
+                &--tres {
+                    right: -37px;
+                    top: 67px;
+                    width: 83px;
+                    height: 160px;
+                    background-size: 83px 160px;
+                }
+                &--cuatro {
+                    right: -28px;
+                    top: 98px;
+                    width: 98px;
+                    height: 160px;
+                    background-size: 98px 160px;
+                }
+                &--cinco {
+                    right: -28px;
+                    top: 69px;
+                    width: 85px;
+                    height: 160px;
+                    background-size: 85px 160px;
+                }
+                &--seis {
+                    right: -19px;
+                    top: 98px;
+                    width: 84px;
+                    height: 160px;
+                    background-size: 84px 160px;
+                }
+                &--siete {
+                    right: -19px;
+                    top: 72px;
+                    width: 67px;
+                    height: 160px;
+                    background-size: 67px 160px;
+                }
+                &--ocho {
+                    right: -19px;
+                    top: 74px;
+                    width: 83px;
+                    height: 160px;
+                    background-size: 83px 160px;
+                }
             }
         }
     }
 }
 
+@media (max-width: 1200px) {
+    .stages {
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+            margin-top: 70px;
+        }
+        &__sliders {
+            width: 729px;
+            &-prev,
+            &-next {
+                width: 195px;
+                margin-top: 30px;
+                .stages__slider {
+                    padding-bottom: 150px;
+                }
+            }
+            &-current {
+                width: 291px;
+                .stages__slider {
+                    padding-bottom: 150px;
+                }
+            }
+        }
+        &__slider {
+            &-description {
+                width: 153px;
+                bottom: -31px;
+                padding: 13px;
+                &--max {
+                    width: 248px;
+                    padding: 21px;
+                    bottom: -50px;
+                    .stages__slider-text {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &-text {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            &-number {
+                &--uno {
+                    right: -14px;
+                    top: 27px;
+                    width: 26px;
+                    height: 78px;
+                    background-size: 26px 78px;
+                }
+                &--dos {
+                    right: -18px;
+                    top: 70px;
+                    width: 26px;
+                    height: 78px;
+                    background-size: 91px 78px;
+                }
+                &--tres {
+                    right: -37px;
+                    top: 67px;
+                    width: 83px;
+                    height: 78px;
+                    background-size: 83px 78px;
+                }
+                &--cuatro {
+                    right: -28px;
+                    top: 98px;
+                    width: 98px;
+                    height: 78px;
+                    background-size: 98px 78px;
+                }
+                &--cinco {
+                    right: -28px;
+                    top: 69px;
+                    width: 85px;
+                    height: 78px;
+                    background-size: 85px 78px;
+                }
+                &--seis {
+                    right: -19px;
+                    top: 98px;
+                    width: 84px;
+                    height: 78px;
+                    background-size: 84px 78px;
+                }
+                &--siete {
+                    right: -19px;
+                    top: 72px;
+                    width: 67px;
+                    height: 78px;
+                    background-size: 67px 78px;
+                }
+                &--ocho {
+                    right: -19px;
+                    top: 74px;
+                    width: 83px;
+                    height: 78px;
+                    background-size: 83px 78px;
+                }
+            }
+        }
+    }
+}
 
-
-
-// .swiper-pagination {
-//     display: flex;
-//     justify-content: center;
-// }
-// .swiper-pagination-bullet {
-//     width: 15px;
-//     height: 15px;
-//     background: #fff;
-//     opacity: 1;
-
-// }
-// .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-//     margin: 0 20px 0 0;
-// }
-// .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
-//     margin: 0;
-// }
-// .swiper-pagination-bullet-active {
-//     width: 15px;
-//     height: 15px;
-//     background: #fff;
-//     opacity: 1;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// .swiper-pagination-bullet-active:after {
-//     content: '';
-//     background: #2A7AC0;
-//     width: 9px;
-//     height: 9px;
-//     border-radius: 50%;
-// }
 
 @media (max-width: 1260px) {
     .find-auto {
