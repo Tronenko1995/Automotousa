@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__wrap {
+        width: 1920px;
+        padding: 50px;
+    }
+    &__row {
+        display: flex;
+        margin-top: 113px;
+    }
+    &__left {
+
+    }
+    &__right {
+
+    }
+    &__slider {
+        width: 900px;
+        &--thumbs {
+            margin-top: 20px;
+            .card__slider-block {
+                width: 170px;
+                height: 95px;
+                cursor: pointer;
+                border: 2px solid transparent;
+                display: flex;
+            }
+            .swiper-slide {
+                &.swiper-slide-thumb-active {
+                    .card__slider-block {
+                        border: 2px solid #621212;
+                    }
+                }
+            }
+        }
+    }
+}

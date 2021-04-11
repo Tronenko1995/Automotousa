@@ -6,6 +6,8 @@
 
 @import './UI/callback.scss';
 @import './UI/modal.scss';
+@import './UI/calc.scss';
+@import './UI/select.scss';
 
 @import './nav';
 @import './mobile';
@@ -19,5 +21,13 @@
 @import './main/why';
 
 @import './stages/stages';
+@import './stages/calc-block';
+
+@import './clearance/clearance';
+@import './clearance/clearance-extra';
+@import './clearance/clearance-auto';
+
+
+@import './card/card';
 
 @import './footer';

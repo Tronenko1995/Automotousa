@@ -67,4 +67,22 @@ $(document).ready(function() {
             })
     })
 
+    if ($('.select').length >= 1) {
+
+        $('.select').on('click',function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+            } else {
+                $(this).addClass('open');
+            }
+        });
+    
+        $('.select').on('click', '.select__item', function (e) {
+            e.stopPropagation();
+            $(this).closest('.select').find('.select__head').text($(this).text());
+            $(this).closest('.select').removeClass('open').find('.select__input').val($(this).data('value')).trigger('input')
+        });
+
+    }
+
 });

@@ -1,0 +1,89 @@
+.select {
+    position: relative;
+    display: block;
+	width: 451px;
+    min-width: 451px;
+    background: #621212;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        // border: 1px solid #ff0000;
+    }
+    &.open {
+        // border-top: 1px solid #ff0000;
+        // border-left: 1px solid #ff0000;
+        // border-right: 1px solid #ff0000;
+        // border-bottom: 1px solid transparent;
+        // border-radius: 4px 4px 0 0;
+
+        & .select__head::after {
+            transform: translateY(50%) rotate(180deg);
+        }
+        & .select__list {
+            display: block;
+        }
+    }
+    &__head {
+        padding: 12px 24px;
+    
+        &::after {
+            width: 20px;
+            height: 10px;
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxMSAxMUwyMSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+            background-repeat: no-repeat;
+            background-size: 20px 10px;
+            position: absolute;
+            right: 16px;
+            bottom: 50%;
+            transform: translateY(50%);
+            content: '';
+            display: block;
+            transition: .2s ease-in;
+        }
+    }
+    &__list {
+        // border-bottom: 1px solid  #ff0000;
+        // border-left: 1px solid  #ff0000;
+        // border-right: 1px solid  #ff0000;
+        background: #FFFFFF;
+        box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.35);
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: 0;
+        z-index: 100;
+    }
+    &__item {
+        position: relative;
+        padding: 7px 24px;
+        cursor: pointer;
+        list-style-type: none;
+        color: #000;
+        &:hover {
+            color: #621212;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .select {
+        width: 427px;
+        min-width: 427px;
+    }
+}
+
+@media (max-width: 700px) {
+    .select {
+        width: 317px;
+        min-width: 317px;
+        font-size: 16px;
+    }
+}

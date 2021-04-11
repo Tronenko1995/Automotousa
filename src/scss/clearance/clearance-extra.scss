@@ -1,0 +1,414 @@
+.clearance-extra {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__wrap {
+        width: 1400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__calc {
+        &-row {
+            display: flex;
+        }
+    }
+    .calc {
+        width: 1394px;
+        padding: 28px 91px 28px 28px;
+        &__left {
+
+        }
+        &__right {
+            width: 100%;
+            margin-left: 30px;
+            &-row {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-title {
+                font-family: 'Roboto Condensed';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 26px;
+                color: #000000;
+                position: relative;
+                padding-bottom: 15px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 119px;
+                    background: #621212;
+                    height: 1px;
+                    top: 100%;
+                    left: 0;
+                }
+                &--price {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &--next {
+                    margin-top: 40px;
+                }
+            }
+            &-text {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 26px;
+                color: #000000;
+                margin-top: 15px;
+            }
+        }
+        &__extra {
+            &-row {
+                display: flex;
+                margin-top: 28px;
+            }
+            &-input {
+                &-wrap {
+                    margin-top: 0;
+                    width: 557px;
+                }
+            }
+            & > .select,
+            & > .calc__extra-input-wrap {
+                margin-top: 28px;
+            }
+        }
+        &__select {
+            min-width: 557px;
+            width: 557px;
+            line-height: 1;
+            &--money {
+                width: 134px;
+                min-width: 134px;
+                margin-left: 20px;
+            }
+        }
+        &__button {
+            margin-top: 50px;
+            border: 1px solid #000000;
+            padding: 10px 133px 11px 23px;
+            &:hover {
+                border-color: transparent
+            }
+        }
+    }
+    &__find {
+        margin-top: 50px;
+        background: #FFFFFF;
+        box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.35);
+        padding: 28px;
+        width: 1074px;
+        &-title {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            text-align: center;
+        }
+        &-input {
+            &-wrap {
+                width: 288px;
+                background: #621212;
+                position: relative;
+            }
+            width: 100%;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.44px;
+            color: #FFFFFF;
+            background: #621212;
+            padding: 12px 55px 12px 24px;
+            &::placeholder {
+                color: #FFFFFF;
+                font-family: 'Roboto Condensed';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 1;
+                letter-spacing: 0.44px;
+            }
+        }
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        &-button {
+            width: 48px;
+            height: 44px;
+            background-color: #621212;
+            cursor: pointer;
+        }
+        &-x {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width: 1434px) {
+    .clearance-extra {
+        &__calc {
+            &-row {
+                flex-direction: column;
+            }
+        }
+        .calc {
+            width: 728px;
+            padding: 24px;
+            &__title {
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 23px;
+            }
+            &__select {
+                width: 516px;
+                min-width: 516px;
+                &--money {
+                    width: 134px;
+                    min-width: unset;
+                }
+            }
+            &__extra {
+                &-input {
+                    &-wrap {
+                        width: 516px;
+                        min-width: 516px;
+                    }
+                }
+            }
+            &__right {
+                margin-left: 0;
+                margin-top: 30px;
+                padding-right: 105px;
+                &-title {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+                &-text {
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        &__find {
+            width: 346px;
+            &-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            &-input {
+                &-wrap {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .clearance-extra {
+        &.unicMobiTop {
+            margin-top: -356px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .clearance-extra {
+        .calc {
+            &__title {
+                font-size: 26px;
+                line-height: 30px;
+            }
+            &__select {
+                font-size: 16px;
+            }
+            &__input {
+                font-size: 16px;
+                &::placeholder {
+                    font-size: 16px;
+                }
+            }
+            &__extra {
+                &-input {
+                    &-wrap {
+                        &::after {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &-row {
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .clearance-extra .calc__extra-input-wrap {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .clearance-extra {
+        &__wrap {
+            padding: 0 20px;
+        }
+        .calc {
+            width: 100%;
+            &__extra {
+                &-row {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+            &__select {
+                &--money {
+                    margin-left: 0;
+                    margin-top: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .clearance-extra {
+        margin-top: 30px;
+        &.unicMobiTop {
+            margin-top: 30px;
+        }
+        .calc {
+            &__select {
+                width: 100%;
+                    min-width: unset;
+                &--money {
+                    width: 134px;
+                }
+            }
+            &__right {
+                padding-right: 0;
+            }
+
+            &__extra {
+                &-input {
+                    &-wrap {
+                        min-width: unset;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &__find {
+            width: 100%;
+            &-input {
+                &-wrap {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .clearance-extra {
+        &__wrap {
+            padding: 0 10px;
+        }
+        &.unicMobiTop {
+            margin-top: 18px;
+        }
+        &__calc {
+            &-left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        .calc {
+            &__title {
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &__select {
+                font-size: 14px;
+                &--money {
+                    margin-top: 19px;
+                }
+            }
+            &__input {
+                font-size: 14px;
+                &::placeholder {
+                    font-size: 14px;
+                }
+            }
+            &__extra {
+                width: 100%;
+                &-input {
+                    &-wrap {
+                        &::after {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-row {
+                    margin-top: 19px;
+                }
+                & > .select {
+                    margin-top: 19px;
+                }
+            }
+            &__button {
+                margin-top: 19px;
+                margin-left: auto;
+                padding: 8px 81px 7px 19px;
+                font-size: 14px;
+                line-height: 16px;
+                &::after {
+                    font-size: 22px;
+                    width: 30px;
+                    height: 31px;
+                }
+            }
+            &__right {
+                &-title {
+                    font-size: 20px;
+                    line-height: 23px;
+                    margin-bottom: 3px;
+                    &--next {
+                        margin-top: 19px;
+                    }
+                }
+                &-text {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

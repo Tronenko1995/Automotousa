@@ -25,5 +25,9 @@
             align-items: center;
             justify-content: center;
         }
+        &:hover {
+            background-color: #621212;
+            color: #fff;
+        }
     }
 }

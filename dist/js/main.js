@@ -197,10 +197,6 @@ $(document).ready(function() {
         currentAuctionRender = 0,
         tempHot = 0,
         tempAuction = 0;
-    
-    $('.jsMoreHot').on('click', function(e) {
-        e.preventDefault();
-    })
 
     function appendHot(item) {
         $('.hot-offer__list').append(`
