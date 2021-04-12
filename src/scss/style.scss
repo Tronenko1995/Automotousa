@@ -2,12 +2,12 @@
 
 @import './config';
 
-@import './svg';
-
 @import './UI/callback.scss';
 @import './UI/modal.scss';
 @import './UI/calc.scss';
 @import './UI/select.scss';
+
+@import './svg';
 
 @import './nav';
 @import './mobile';
@@ -29,5 +29,6 @@
 
 
 @import './card/card';
+@import './card/card-auto';
 
 @import './footer';
