@@ -1,0 +1,115 @@
+.stand {
+    margin-top: 28px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.35);
+    &__wrap {
+        padding: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__item {
+        margin-right: 2px;
+        &--first {
+            flex: 1 1 auto;
+        }
+        &-wrap {
+            flex: 1 1 auto;
+            justify-content: space-between;
+            display: flex;
+        }
+        &-list {
+
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-svg {
+            width: 24px;
+            height: 24px;
+            fill: #621212;
+        }
+        &-text {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 26px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .stand {
+        &__item {
+            &-text {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .stand {
+        background: #621212;
+        &__wrap {
+            padding: 24px;
+        }
+        &__item {
+            &-content {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+            &-wrap {
+                flex-direction: column;
+            }
+            &-text {
+                color: #fff;
+                font-size: 20px;
+                line-height: 23px;
+            }
+            &-svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .stand {
+        &__item {
+            &-text {
+                font-size: 17px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .stand {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        &__wrap {
+            width: 600px;
+            padding: 15px;
+        }
+        &__item {
+            &-text {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+}

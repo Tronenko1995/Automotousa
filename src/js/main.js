@@ -220,7 +220,7 @@ $(document).ready(function() {
                 <p class="hot-offer__item-text">${item.engine}</p>
             </div>
             <p class="hot-offer__item-text">${item.description}<br>${item.descriptionNext}</p>
-            <button class="hot-offer__item-button callback__button jsCallback" data-product="${item.name}">Обратный звонок</button>
+            <button class="hot-offer__item-button callback__button jsCallback svg-arrow" data-product="${item.name}">Обратный звонок</button>
         </li>`)
     }
 
@@ -245,7 +245,7 @@ $(document).ready(function() {
                 <p class="join-auction__item-text">Двигатель</p>
                 <p class="join-auction__item-text">${item.engine}</p>
             </div>
-            <button class="join-auction__item-button callback__button jsCallback data-product="${item.name}">Обратный звонок</button>
+            <button class="join-auction__item-button callback__button jsCallback svg-arrow" data-product="${item.name}">Обратный звонок</button>
         </li>`)
     }
 
@@ -319,7 +319,7 @@ $(document).ready(function() {
                 <p class="hot-offer__item-text">${item.engine}</p>
             </div>
             <p class="hot-offer__item-text">${item.description}<br>${item.descriptionNext}</p>
-            <button class="hot-offer__item-button callback__button jsCallback" data-product="${item.name}">Обратный звонок</button>`).addClass('hot-offer__item svg-fire')
+            <button class="hot-offer__item-button callback__button jsCallback svg-arrow" data-product="${item.name}">Обратный звонок</button>`).addClass('hot-offer__item svg-fire')
         $(container).append(newItem)
             tempHot = i;
         }

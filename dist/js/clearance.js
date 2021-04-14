@@ -123,7 +123,7 @@ $(document).ready(function() {
                     <p class="clearance-auto__item-text">Двигатель</p>
                     <p class="clearance-auto__item-text">${item.engine}</p>
                 </div>
-                <button class="clearance-auto__item-button callback__button jsCallback data-product="${item.name}">Обратный звонок</button>
+                <button class="clearance-auto__item-button callback__button jsCallback svg-arrow" data-product="${item.name}">Обратный звонок</button>
             </li>`)
         }
 

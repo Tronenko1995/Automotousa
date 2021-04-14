@@ -1,0 +1,199 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__row {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__block {
+        max-width: 1526px;
+        width: 100%;
+    }
+    &__text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 33px;
+        color: #000000;
+        margin-right: 10px;
+        
+    }
+    &__inputs {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1400px;
+    }
+    &__select {
+        max-width: 440px;
+        width: 33%;
+        min-width: unset;
+        line-height: 1;
+        margin-right: 20px;
+        position: relative;
+        display: block;
+        background: #621212;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    // &__input {
+    //     width: 100%;
+    //     &-wrap {
+    //         width: 440px;
+    //         position: relative;
+    //         margin-right: 20px;
+    //         &::after {
+    //             position: absolute;
+    //             content: 'Ввод';
+    //             font-family: 'Roboto Condensed';
+    //             font-style: normal;
+    //             font-weight: normal;
+    //             font-size: 20px;
+    //             line-height: 1;
+    //             letter-spacing: 0.44px;
+    //             color: #d0b7b7;
+    //             right: 15px;
+    //             top: 50%;
+    //             transform: translateY(-50%);
+    //         }
+    //     }
+    //     background: #621212;
+    //     font-family: 'Roboto Condensed';
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     font-size: 20px;
+    //     line-height: 32px;
+    //     letter-spacing: 0.44px;
+    //     color: #FFFFFF;
+    //     padding: 12px 15px 12px 24px;
+    //     max-height: 44px;
+    //     &::placeholder {
+    //         font-family: 'Roboto Condensed';
+    //         font-style: normal;
+    //         font-weight: normal;
+    //         font-size: 20px;
+    //         line-height: 32px;
+    //         letter-spacing: 0.44px;
+    //         color: #FFFFFF;
+    //     }
+    // }
+    &__reset {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: #E82F3E;
+        background-color: unset;
+        cursor: pointer;
+        padding-left: 34px;
+        margin-left: 10px;
+        min-width: 259px;
+        display: flex;
+        align-items: center;
+        &::before {
+            left: 0;
+        }
+    }
+    &__button {
+        display: none;
+        background: #621212;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding: 7px 85px 8px 85px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1900px) {
+    .filters {
+        &__inputs {
+            max-width: 1251px;
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+    .filters {
+        &__block {
+            max-width: 1300px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .filters {
+        &__reset {
+            padding-left: 24px;
+            margin-left: 10px;
+            min-width: 215px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+        }
+        &__select {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .filters {
+        &__inputs {
+            display: none;
+        }
+        &__text {
+            display: none;
+        }
+        &__button {
+            display: block;
+        }
+        &__reset {
+            min-width: auto;
+            font-size: 18px;
+            line-height: 20px;
+        }
+        &__select {
+            width: 100%;
+            margin-top: 24px;
+            max-width: unset;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .filters {
+        &__row {
+            width: calc(100% - 20px);
+        }
+        &__button {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 7px 40px 8px 40px;
+        }
+        &__reset {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

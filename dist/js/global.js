@@ -67,9 +67,9 @@ $(document).ready(function() {
             })
     })
 
-    if ($('.select').length >= 1) {
+    if ($('.jsSelect').length >= 1) {
 
-        $('.select').on('click',function () {
+        $('.jsSelect').on('click',function () {
             if ($(this).hasClass('open')) {
                 $(this).removeClass('open');
             } else {
@@ -77,7 +77,7 @@ $(document).ready(function() {
             }
         });
     
-        $('.select').on('click', '.select__item', function (e) {
+        $('.jsSelect').on('click', '.select__item', function (e) {
             e.stopPropagation();
             $(this).closest('.select').find('.select__head').text($(this).text());
             $(this).closest('.select').removeClass('open').find('.select__input').val($(this).data('value')).trigger('input')

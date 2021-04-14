@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Растаможка авто</title>
+    <title>Растаможка авто Automotousa</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -84,7 +84,7 @@
                     </ul>
                     <p class="clearance__description unicMobiHide">Чтобы рассчитать полную стоимость растаможки автомобиля, воспользуйтесь калькулятором, ниже на странице.</p>
                 </div>
-                <div class="clearance__button jsShowMore unicMobiShow">Показать больше</div>
+                <div class="clearance__button jsShowMore unicMobiShow svg-arrow-hover">Показать больше</div>
                 <div class="clearance__info unicMobiHide">
                     <h2 class="clearance__text">Растаможка электромобилей и гибридов в Украине в 2021 году</h2>
                     <ul class="clearance__list">
@@ -100,7 +100,7 @@
                     <p class="calc__title">Калькулятор растаможки. Действующие Тарифы:</p>
                     <div class="clearance-extra__calc-row">
                         <div class="clearance-extra__calc-left">
-                            <div class="calc__select select">
+                            <div class="calc__select select jsSelect">
                                 <input class="select__input" type="hidden" name="autoType" value="passenger">
                                 <div class="select__head">Легковые</div>
                                 <ul class="select__list">
@@ -117,7 +117,7 @@
                                     <div class="calc__extra-input-wrap modal__input-wrap">
                                         <input type="text" name="priceAuto" class="calc__input modal__input" placeholder="Стоимость автомобиля" required="">
                                     </div>
-                                    <div class="calc__select calc__select--money select">
+                                    <div class="calc__select calc__select--money select jsSelect">
                                         <input class="select__input" type="hidden" name="currency">
                                         <div class="select__head">USD</div>
                                         <ul class="select__list">
@@ -131,7 +131,7 @@
                                     <input type="text" name="name" class="calc__input modal__input" placeholder="Полная масса, кг" required="">
                                 </div>
     
-                                <div class="calc__select select jsCalcExtra" id="engineVSelect">
+                                <div class="calc__select select jsSelect jsCalcExtra" id="engineVSelect">
                                     <input class="select__input" type="hidden" name="engineV">
                                     <div class="select__head">Объем двигателя куб. дм</div>
                                     <ul class="select__list">
@@ -141,7 +141,7 @@
                                     </ul>
                                 </div>
     
-                                <div class="calc__select select jsCalcExtra" id="typeEngineSelect">
+                                <div class="calc__select select jsSelect jsCalcExtra" id="typeEngineSelect">
                                     <input class="select__input" type="hidden" name="typeEngine">
                                     <div class="select__head">Тип двигателя</div>
                                     <ul class="select__list">
@@ -150,7 +150,7 @@
                                     </ul>
                                 </div>
     
-                                <div class="calc__select select jsCalcExtra" id="yearOfIssueSelect">
+                                <div class="calc__select select jsSelect jsCalcExtra" id="yearOfIssueSelect">
                                     <input class="select__input" type="hidden" name="yearOfIssue">
                                     <div class="select__head">Год выпуска</div>
                                     <ul class="select__list">
@@ -164,7 +164,7 @@
                                     <input type="text" name="name" class="calc__input modal__input" placeholder="Мощность, кВт" name="power">
                                 </div>
     
-                                    <div class="calc__select select jsCalcExtra" id="ageMotoSelect">
+                                    <div class="calc__select select jsSelect jsCalcExtra" id="ageMotoSelect">
                                         <input class="select__input" type="hidden" name="ageMoto">
                                         <div class="select__head">Возраст мотоцикла</div>
                                         <ul class="select__list">
@@ -174,7 +174,7 @@
                                         </ul>
                                     </div>
     
-                                <div class="calc__select select jsCalcExtra" id="ageAutoSelect">
+                                <div class="calc__select select jsSelect jsCalcExtra" id="ageAutoSelect">
                                     <input class="select__input" type="hidden" name="ageAuto">
                                     <div class="select__head">Возраст автомобиля</div>
                                     <ul class="select__list">
@@ -187,7 +187,7 @@
                                 </div>
     
                             </div>
-                            <button class="calc__button callback__button">Рассчитать</button>
+                            <button class="calc__button callback__button svg-arrow">Рассчитать</button>
                         </div>
                         <div class="calc__right">
                             <div class="calc__right-row">
@@ -246,7 +246,7 @@
                     <hr class="clearance-auto__line">
                 </div>
                 <ul class="clearance-auto__list"></ul>
-                <button class="clearance-auto__button jsMoreAuto">Показать больше</button>
+                <button class="clearance-auto__button jsMoreAuto svg-arrow-hover">Показать больше</button>
             </div>
         </section>
 
@@ -258,7 +258,7 @@
             </a>
             <h2 class="footer__title">Подбор авто прямо сейчас?</h2>
             <p class="footer__text">Покупай по лучшим ценам</p>
-            <button class="footer__button callback__button jsCallback">Обратный звонок</button>
+            <button class="footer__button callback__button jsCallback svg-arrow">Обратный звонок</button>
             <div class="footer__info">
                 <p class="footer__info-text">Телефон: <a class="footer__info-link" href="tel:+380973772277">+(380)97-377-22-77</a></p>
                 <p class="footer__info-text">Мы открыты: Ежедневно с 12:00 до 20:00</p>
@@ -282,7 +282,7 @@
                     <textarea type="text" name="extra" class="modal__input modal__textarea" placeholder="Дополнительная информация"></textarea>
                 </div>
                 <input type="hidden" name="product" value="">
-                <button class="modal__button callback__button">Отправить</button>
+                <button class="modal__button callback__button svg-arrow">Отправить</button>
             </form>
         </div>
     </div>

@@ -10,6 +10,7 @@
         color: #000;
         cursor: pointer;
         position: relative;
+        transition: all 0.3s ease;
         &:after {
             content: '🠒';
             width: 44px;

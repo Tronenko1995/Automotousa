@@ -1,9 +1,8 @@
-.clearance-auto {
+.auction-auto {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     &__wrap {
         width: 1920px;
         display: flex;
@@ -83,6 +82,7 @@
         }
     }
     &__button {
+        width: 286px;
         cursor: pointer;
         // margin-top: 50px;
         background-color: #621212;
@@ -93,7 +93,6 @@
         line-height: 23px;
         color: #FFFFFF;
         padding: 10px 69px 9px 69px;
-        width: 286px;
         transition: all 0.3s ease;
         &:hover {
             &:after {
@@ -115,10 +114,35 @@
             padding-left: 33px;
         }
     }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        &-text {
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 42px;
+            color: #000000;
+        }
+        &-arrow {
+            width: 40px;
+            height: 8px;
+            cursor: pointer;
+        }
+        &-prev {
+            margin-right: 28px;
+        }
+        &-next {
+            margin-left: 28px;
+            transform: scale(-1, 1);
+        }
+    }
+
 }
 
 @media (min-width: 1920px) {
-    .clearance-auto {
+    .auction-auto {
         &__wrap {
             width: 100%;
         }
@@ -129,7 +153,7 @@
 }
 
 @media (max-width: 1400px) {
-    .clearance-auto {
+    .auction-auto {
         &__item {
             &-title {
                 font-size: 20px;
@@ -151,7 +175,7 @@
 }
 
 @media (max-width: 1260px) {
-    .clearance-auto {
+    .auction-auto {
         &__title {
             font-size: 36px;
             line-height: 42px;
@@ -160,7 +184,7 @@
 }
 
 @media (max-width: 1200px) {
-    .clearance-auto {
+    .auction-auto {
         &__list {
             width: calc(100% - 40px);
         }
@@ -174,12 +198,24 @@
             padding: 12px 57px 11px 56px;
             margin-top: 4px;
         }
+        &__pagination {
+            &-text {
+                font-size: 20px;
+                line-height: 23px;
+            }
+            &-prev {
+                margin-right: 52px;
+            }
+            &-next {
+                margin-left: 52px;
+            }
+        }
     }
 }
 
 @media (max-width: 516px) {
-    .clearance-auto {
-        // margin-top: 380px;
+    .auction-auto {
+        margin-top: 8px;
         &__title {
             font-size: 24px;
             line-height: 28px;
@@ -220,14 +256,23 @@
             padding: 8px 32px 7px 33px;
             margin-top: 8px;
             width: 167px;
-            &:hover {
-                padding-left: 20px;
-                &::after {
-                    background-size: 20px 8px;
-                    width: 33px;
-                    height: 31px;
-                    font-size: 22px;
+                &:hover {
+                    padding-left: 20px;
+                    &::after {
+                        background-size: 20px 8px;
+                        width: 33px;
+                        height: 31px;
+                        font-size: 22px;
+                    }
                 }
+        }
+        &__pagination {
+            margin-top: 8px;
+            &-prev {
+                margin-right: 31px;
+            }
+            &-next {
+                margin-left: 31px;
             }
         }
     }

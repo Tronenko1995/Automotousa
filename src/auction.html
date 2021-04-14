@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аукцион Automotousa</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <main>
+        <section class="auction">
+            <div class="auction__wrap">
+                <nav class="nav">
+                    <div class="mobile">
+                        <div class="mobile__button jsMobMenu">
+                            <div class="mobile__button-item"></div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="mobile-menu__cross jsMobMenu"></div>
+                        <ul class="mobile-menu__nav">
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Главная</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Наши услуги</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Как мы работаем</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Аукцион</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Горячие предложения</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="mobile-menu__bottom">
+                            <p class="mobile-menu__bottom-text">Мы открыты: Ежедневно<br> с 12:00 до 20:00</p>
+                            <p class="mobile-menu__bottom-text">Телефон: +(380)97-377-22-77</p>
+                            <p class="mobile-menu__bottom-text">Киев, пр. Науки, 3 Бизнес Центр Sunflower</p>
+                        </div>
+                    </div>
+                    <ul class="nav__menu">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Наши услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Как мы работаем</a>
+                        </li>
+                        <li class="nav__item nav__item--logo">
+                            <a href="#" class="nav__link">
+                                <img class="nav__svg" src="img/global/logo.svg" width="285" height="31">
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Аукцион</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Горячие предложения</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="auction__title">Аукцион Automotousa</h1>
+                <div class="filters">
+                    <div class="filters__row">
+                        <button class="filters__button jsModal">Фильтры</button>
+                        <p class="filters__text">Фильтры</p>
+                        <div class="filters__inputs">
+                            <div class="filters__select select jsUnicSelect">
+                                <input class="select__input" type="hidden" name="">
+                                <div class="select__head">Марка</div>
+                                <ul class="select__list">
+                                    <li class="select__item">Audi</li>
+                                    <li class="select__item">Hyundai</li>
+                                </ul>
+                            </div>
+                            <div class="filters__select select jsUnicSelect">
+                                <input class="select__input" type="hidden" name="">
+                                <div class="select__head">Привод</div>
+                                <ul class="select__list">
+                                    <li class="select__item">Передний</li>
+                                    <li class="select__item">Полный</li>
+                                </ul>
+                            </div>
+                            <div class="filters__select select jsUnicSelect">
+                                <input class="select__input" type="hidden" name="">
+                                <div class="select__head">Состояние</div>
+                                <ul class="select__list">
+                                    <li class="select__item">Заводится и едет</li>
+                                    <li class="select__item">Заводится но не едет</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="filters__reset svg-closed jsClear">Очитить все фильтры</button>
+                    </div>
+                    <div class="filters__block">
+                        <div class="dashboard">
+                            <div class="dashboard__item">
+                                <p class="dashboard__item-text">Объем двигателя (<span class="vEngineDisplay"></span>)</p>
+                                <div class="dashboard__range">
+                                    <input class="dashboard__range-input jsVEngine" type="range" min="0.1" max="10" step="0.1" value="0.7">
+                                    <input class="dashboard__range-input jsVEngine" type="range" min="0.1" max="10" step="0.1" value="3.3">
+                                    <span id="vEngineLine" class="dashboard__range-line"></span>
+                                </div>
+                                <div class="dashboard__range-info">
+                                    <p class="dashboard__range-text">0,1</p>
+                                    <p class="dashboard__range-text">10</p>
+                                </div>
+                            </div>
+                            <div class="dashboard__item">
+                                <p class="dashboard__item-text">Год (<span class="yearDisplay"></span>)</p>
+                                <div class="dashboard__range">
+                                    <input class="dashboard__range-input jsYear" type="range" min="2010" max="2021" step="1" value="2010">
+                                    <input class="dashboard__range-input jsYear" type="range" min="2010" max="2021" step="1" value="2015">
+                                    <span id="yearLine" class="dashboard__range-line"></span>
+                                </div>
+                                <div class="dashboard__range-info">
+                                    <p class="dashboard__range-text">2010</p>
+                                    <p class="dashboard__range-text">2021</p>
+                                </div>
+                            </div>
+                            <div class="dashboard__item">
+                                <p class="dashboard__item-text">Пробег (<span class="mileageDisplay"></span>)</p>
+                                <div class="dashboard__range">
+                                    <input class="dashboard__range-input jsMileage" type="range" min="1" max="1000000" step="1" value="1">
+                                    <input class="dashboard__range-input jsMileage" type="range" min="1" max="1000000" step="1" value="390001">
+                                    <span id="mileageLine" class="dashboard__range-line"></span>
+                                </div>
+                                <div class="dashboard__range-info">
+                                    <p class="dashboard__range-text">1</p>
+                                    <p class="dashboard__range-text">1000000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stand">
+                            <div class="stand__wrap">
+                                <div class="stand__item stand__item--first">
+                                    <div class="stand__item-list">
+                                        <div class="stand__item-content">
+                                            <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                            </svg>
+                                            <p class="stand__item-text">Audi</p>
+                                        </div>
+                                        <div class="stand__item-content">
+                                            <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                            </svg>
+                                            <p class="stand__item-text">Hyundai</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stand__item-wrap">
+                                    <div class="stand__item">
+                                        <div class="stand__item-list">
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Передний</p>
+                                            </div>
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Полный</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stand__item">
+                                        <div class="stand__item-list">
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Заводится и едет</p>
+                                            </div>
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Заводится но не едет</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stand__item-wrap">
+                                    <div class="stand__item">
+                                        <div class="stand__item-list">
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">объем двигателя <span class="vEngineDisplay"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stand__item">
+                                        <div class="stand__item-list">
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Год <span class="yearDisplay"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stand__item">
+                                        <div class="stand__item-list">
+                                            <div class="stand__item-content">
+                                                <svg class="stand__item-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>
+                                                <p class="stand__item-text">Пробег <span class="mileageDisplay"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auction-auto">
+            <div class="auction-auto__wrap">
+                <ul class="auction-auto__list">
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2019_JEEP_COMPASS_LATITUDE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2019 JEEP COMPASS LATITUDE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2019 JEEP COMPASS LATITUDE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2019_JEEP_COMPASS_LATITUDE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2019 JEEP COMPASS LATITUDE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2019 JEEP COMPASS LATITUDE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2019_JEEP_COMPASS_LATITUDE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2019 JEEP COMPASS LATITUDE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2019 JEEP COMPASS LATITUDE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2019_JEEP_COMPASS_LATITUDE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2019 JEEP COMPASS LATITUDE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2019 JEEP COMPASS LATITUDE">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/Acura_MDX_2014.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">Acura MDX 2014</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="Acura MDX 2014">Обратный звонок</button>
+                    </li>
+                    <li class="auction-auto__item">
+                        <img class="auction-auto__item-img" src="img/auto/2017_HYUNDAI_SONATA_SE.jpg" alt="" width="394" height="217">
+                        <p class="auction-auto__item-title">2017 HYUNDAI SONATA SE</p>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Объем бака, л</p>
+                            <p class="auction-auto__item-text">73 л</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Привод</p>
+                            <p class="auction-auto__item-text">передний и задний</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Пробег</p>
+                            <p class="auction-auto__item-text">14954</p>
+                        </div>
+                        <div class="auction-auto__item-row">
+                            <p class="auction-auto__item-text">Двигатель</p>
+                            <p class="auction-auto__item-text">V6</p>
+                        </div>
+                        <button class="auction-auto__item-button callback__button jsCallback svg-arrow" data-product="2017 HYUNDAI SONATA SE">Обратный звонок</button>
+                    </li>
+                </ul>
+                <div class="auction-auto__pagination">
+                    <div class="auction-auto__pagination-arrow auction-auto__pagination-prev svg-prev"></div>
+                    <p class="auction-auto__pagination-text">1/298</p>
+                    <div class="auction-auto__pagination-arrow auction-auto__pagination-next svg-prev"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrap">
+            <a class="footer__logo" href="#">
+                <img class="footer__logo-img" src="img/global/logo-2.svg" alt="" width="593" height="64">
+            </a>
+            <h2 class="footer__title">Подбор авто прямо сейчас?</h2>
+            <p class="footer__text">Покупай по лучшим ценам</p>
+            <button class="footer__button callback__button jsCallback svg-arrow">Обратный звонок</button>
+            <div class="footer__info">
+                <p class="footer__info-text">Телефон: <a class="footer__info-link" href="tel:+380973772277">+(380)97-377-22-77</a></p>
+                <p class="footer__info-text">Мы открыты: Ежедневно с 12:00 до 20:00</p>
+                <p class="footer__info-text">Киев, пр. Науки, 3 Бизнес Центр Sunflower</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal hide">
+        <div class="modal__content">
+            <div class="modal__block">
+                <div class="modal__cross svg-cross jsCallback"></div>
+                <p class="modal__title">Обратная связь</p>
+                <form class="modal__form">
+                    <div class="modal__input-wrap">
+                        <input type="text" name="name" class="modal__input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="modal__input-wrap">
+                        <input type="text" name="phone" class="modal__input" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="modal__textarea-wrap">
+                        <textarea type="text" name="extra" class="modal__input modal__textarea" placeholder="Дополнительная информация"></textarea>
+                    </div>
+                    <input type="hidden" name="product" value="">
+                    <button class="modal__button callback__button svg-arrow">Отправить</button>
+                </form>
+            </div>
+            <div class="modal__filters hide">
+                <div class="modal__cross svg-cross jsModal"></div>
+                <p class="modal__title">Фильтры</p>
+                <div class="filters__select select jsUnicSelect">
+                    <input class="select__input" type="hidden" name="">
+                    <div class="select__head">Марка</div>
+                    <ul class="select__list">
+                        <li class="select__item">Audi</li>
+                        <li class="select__item">Hyundai</li>
+                    </ul>
+                </div>
+                <div class="filters__select select jsUnicSelect">
+                    <input class="select__input" type="hidden" name="">
+                    <div class="select__head">Привод</div>
+                    <ul class="select__list">
+                        <li class="select__item">Передний</li>
+                        <li class="select__item">Полный</li>
+                    </ul>
+                </div>
+                <div class="filters__select select jsUnicSelect">
+                    <input class="select__input" type="hidden" name="">
+                    <div class="select__head">Состояние</div>
+                    <ul class="select__list">
+                        <li class="select__item">Заводится и едет</li>
+                        <li class="select__item">Заводится но не едет</li>
+                    </ul>
+                </div>
+                <div class="dashboard__item">
+                    <p class="dashboard__item-text">Объем двигателя (<span class="vEngineDisplay"></span>)</p>
+                    <div class="dashboard__range">
+                        <input class="dashboard__range-input jsVEngine2" type="range" min="0.1" max="10" step="0.1" value="0.7">
+                        <input class="dashboard__range-input jsVEngine2" type="range" min="0.1" max="10" step="0.1" value="3.3">
+                        <span id="vEngineLine2" class="dashboard__range-line"></span>
+                    </div>
+                    <div class="dashboard__range-info">
+                        <p class="dashboard__range-text">0,1</p>
+                        <p class="dashboard__range-text">10</p>
+                    </div>
+                </div>
+                <div class="dashboard__item">
+                    <p class="dashboard__item-text">Год (<span class="yearDisplay"></span>)</p>
+                    <div class="dashboard__range">
+                        <input class="dashboard__range-input jsYear2" type="range" min="2010" max="2021" step="1" value="2010">
+                        <input class="dashboard__range-input jsYear2" type="range" min="2010" max="2021" step="1" value="2015">
+                        <span id="yearLine2" class="dashboard__range-line"></span>
+                    </div>
+                    <div class="dashboard__range-info">
+                        <p class="dashboard__range-text">2010</p>
+                        <p class="dashboard__range-text">2021</p>
+                    </div>
+                </div>
+                <div class="dashboard__item">
+                    <p class="dashboard__item-text">Пробег (<span class="mileageDisplay"></span>)</p>
+                    <div class="dashboard__range">
+                        <input class="dashboard__range-input jsMileage2" type="range" min="1" max="1000000" step="1" value="1">
+                        <input class="dashboard__range-input jsMileage2" type="range" min="1" max="1000000" step="1" value="390001">
+                        <span id="mileageLine2" class="dashboard__range-line"></span>
+                    </div>
+                    <div class="dashboard__range-info">
+                        <p class="dashboard__range-text">1</p>
+                        <p class="dashboard__range-text">1000000</p>
+                    </div>
+                </div>
+                <button class="auction-auto__item-button callback__button svg-arrow jsModal">Применить</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/auction.js"></script>
+</body>
+</html>

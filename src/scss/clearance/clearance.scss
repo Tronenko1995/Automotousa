@@ -89,12 +89,12 @@
         display: none;
         position: relative;
         padding: 7px 57px 7px 56px;
+        transition: all 0.3s ease;
         &:hover {
             &:after {
-                content: '🠒';
                 width: 44px;
                 height: 33px;
-                background: #621212;
+                background-color: #621212;
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -193,6 +193,7 @@
             &:hover {
                 padding-left: 20px;
                 &::after {
+                    background-size: 20px 8px;
                     width: 33px;
                     height: 31px;
                     font-size: 22px;
