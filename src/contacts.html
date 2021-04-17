@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная Automotousa</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <main>
+        <section class="find-auto">
+            <div class="find-auto__wrap">
+                <nav class="nav">
+                    <div class="mobile">
+                        <div class="mobile__button jsMobMenu">
+                            <div class="mobile__button-item"></div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="mobile-menu__cross jsMobMenu"></div>
+                        <ul class="mobile-menu__nav">
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Главная</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Наши услуги</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Как мы работаем</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Аукцион</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Горячие предложения</a>
+                            </li>
+                            <li class="mobile-menu__nav-item">
+                                <a class="mobile-menu__nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="mobile-menu__bottom">
+                            <p class="mobile-menu__bottom-text">Мы открыты: Ежедневно<br> с 12:00 до 20:00</p>
+                            <p class="mobile-menu__bottom-text">Телефон: +(380)97-377-22-77</p>
+                            <p class="mobile-menu__bottom-text">Киев, пр. Науки, 3 Бизнес Центр Sunflower</p>
+                        </div>
+                    </div>
+                    <ul class="nav__menu">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Наши услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Как мы работаем</a>
+                        </li>
+                        <li class="nav__item nav__item--logo">
+                            <a href="#" class="nav__link">
+                                <img class="nav__svg" src="img/global/logo.svg" width="285" height="31">
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Аукцион</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Горячие предложения</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="find-auto__title">Найти автомобиль своей мечты</h1>
+                <p class="find-auto__text">“Automotousa” - это широчайший ассортимент авто из США под ключ, самая выгодная доставка авто из Америки в Украину и гарантия качественной услуги! Не упускайте возможность купить авто из США максимально выгодно!</p>
+                <button class="find-auto__button callback__button jsCallback svg-arrow">Обратный звонок</button>
+                <div class="box">
+                    <p class="box__title">Какую машину Вы ищете?</p>
+                    <form class="box__form">
+                        <input class="box__input" type="text" placeholder="Марка">
+                        <input class="box__input" type="text" placeholder="Модель">
+                        <div class="box__search">
+                            <input class="box__input box__input--last" type="text" placeholder="Год" maxlength="4" minlength="4">
+                            <button class="box__button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9428 15.9429C16.3333 15.5524 16.9665 15.5524 17.357 15.9429L21.707 20.2929C22.0975 20.6834 22.0975 21.3166 21.707 21.7071C21.3165 22.0976 20.6833 22.0976 20.2928 21.7071L15.9428 17.3571C15.5523 16.9666 15.5523 16.3334 15.9428 15.9429Z" fill="white"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hot-offer">
+            <div class="hot-offer__wrap">
+                <div class="hot-offer__head">
+                    <hr class="hot-offer__line">
+                    <h2 class="hot-offer__title">Горячее предложение</h2>
+                    <hr class="hot-offer__line">
+                </div>
+                <div class="hot-offer__storage">
+                    <div class="hot-offer__container">
+                        <ul class="hot-offer__list"></ul>
+                    </div>
+                </div>
+                <button class="hot-offer__button jsMoreHot svg-arrow-hover">Показать больше</button>
+            </div>
+        </section>
+
+        <section class="why">
+            <div class="why__wrap">
+                <div class="why__head">
+                    <hr class="why__line">
+                    <h2 class="why__title">Почему Automotousa?</h2>
+                    <hr class="why__line">
+                </div>
+                <div class="why__container-wrap">
+                    <div class="why__container">
+                        <ul class="why__list">
+                            <li class="why__item">
+                                <div class="why__item-svg svg-super"></div>
+                                <p class="why__item-text">Все заботы по автомобилю, начиная от покупки на аукционе, заканчивая растаможкой, ремонтом и постановкой на учет — берем на себя.</p>
+                            </li>
+                            <li class="why__item">
+                                <div class="why__item-svg svg-save"></div>
+                                <p class="why__item-text">У нас только безопасная доставка авто из Америки в Украину. Вы можете застраховать свой автомобиль на все время контейнерной транспортировки.</p>
+                            </li>
+                        </ul>
+                        <p class="why__text">Интересует какая-то конкретная модель?</p>
+                        <p class="why__description">Наш менеджер всегда рад помочь</p>
+                        <button class="why__button callback__button jsCallback svg-arrow">Обратный звонок</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients">
+            <div class="clients__wrap">
+                <div class="clients__head">
+                    <hr class="clients__line">
+                    <h2 class="clients__title">Клиенты выбирают нас</h2>
+                    <hr class="clients__line">
+                </div>
+                <ul class="clients__list">
+                    <li class="clients__item clients__item--uno">
+                        <div class="clients__item-svg svg-uno"></div>
+                        <p class="clients__item-text">Доставка авто из США - процесс не простой, поэтому его доверяют профессионалам компании Automotousa.</p>
+                    </li>
+                    <li class="clients__item clients__item--dos">
+                        <div class="clients__item-svg svg-dos"></div>
+                        <p class="clients__item-text">Берем только свою комиссию, никаких скрытых платежей</p>
+                    </li>
+                    <li class="clients__item clients__item--tres">
+                        <div class="clients__item-svg svg-tres"></div>
+                        <p class="clients__item-text">Мы заботимся о нервах и времени наших Клиентов и поэтому предоставляем возможность отследить авто из США.</p>
+                    </li>
+                    <li class="clients__item clients__item--cuatro">
+                        <div class="clients__item-svg svg-cuatro"></div>
+                        <p class="clients__item-text">Вы можете связаться с нами и за считанные минуты узнать
+                            статус Вашего авто.</p>
+                    </li>
+                    <li class="clients__item clients__item--cinco">
+                        <div class="clients__item-svg svg-cinco"></div>
+                        <p class="clients__item-text">Cтрахуем ваше авто</p>
+                    </li>
+                    <li class="clients__item clients__item--seis">
+                        <div class="clients__item-svg svg-seis"></div>
+                        <p class="clients__item-text">Причина, по которой обращаются в Automotousa — оформление и восстановление машины происходит максимально быстро.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="join-auction">
+            <div class="join-auction__wrap">
+                <div class="join-auction__head">
+                    <hr class="join-auction__line">
+                    <h2 class="join-auction__title">Учавствуй в аукционе</h2>
+                    <hr class="join-auction__line">
+                </div>
+                <ul class="join-auction__list"></ul>
+                <button class="join-auction__button jsMoreAuction svg-arrow-hover">Показать больше</button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__wrap">
+            <a class="footer__logo" href="#">
+                <img class="footer__logo-img" src="img/global/logo-2.svg" alt="" width="593" height="64">
+            </a>
+            <h2 class="footer__title">Подбор авто прямо сейчас?</h2>
+            <p class="footer__text">Покупай по лучшим ценам</p>
+            <button class="footer__button callback__button jsCallback svg-arrow">Обратный звонок</button>
+            <div class="footer__info">
+                <p class="footer__info-text">Телефон: <a class="footer__info-link" href="tel:+380973772277">+(380)97-377-22-77</a></p>
+                <p class="footer__info-text">Мы открыты: Ежедневно с 12:00 до 20:00</p>
+                <p class="footer__info-text">Киев, пр. Науки, 3 Бизнес Центр Sunflower</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal hide">
+        <div class="modal__content">
+            <div class="modal__cross svg-cross jsCallback"></div>
+            <p class="modal__title">Обратная связь</p>
+            <form class="modal__form">
+                <div class="modal__input-wrap">
+                    <input type="text" name="name" class="modal__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="modal__input-wrap">
+                    <input type="text" name="phone" class="modal__input" placeholder="Ваш телефон" required>
+                </div>
+                <div class="modal__textarea-wrap">
+                    <textarea type="text" name="extra" class="modal__input modal__textarea" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <input type="hidden" name="product" value="">
+                <button class="modal__button callback__button svg-arrow">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
